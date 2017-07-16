@@ -24,6 +24,11 @@ var FormLayout = createReactClass({
         var r = this.refs.filedNum1.state.value*this.refs.filedNum2.state.value;
         this.setState({result: r})
     },
+    handleClear: function(){
+        this.refs.filedNum1.setState({value:""});
+        this.refs.filedNum2.setState({value:""});
+        this.setState({result : 0})
+    },
     render: function(){
         return (
             <div className="panel panel-default">
@@ -62,7 +67,7 @@ var FormLayout = createReactClass({
                             </div>
                         </div>
                         <div className="col-sm-3">
-                            <button className="btn btn-danger">Clear</button>
+                            <button className="btn btn-danger" onClick={this.handleClear}>Clear</button>
                         </div>
                     </div>
                 </div>

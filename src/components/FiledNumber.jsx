@@ -8,7 +8,6 @@ var FiledNumber = createReactClass({
     handleChange: function(e){
         var isvalid = e.target.value>0?true:false;
         this.setState({value:parseFloat(e.target.value), valid:isvalid})
-        console.log(this.state.value);
     },
     render: function(){
         var classN = this.state.valid?'form-group':'form-group has-error';
