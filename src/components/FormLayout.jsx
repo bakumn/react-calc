@@ -25,8 +25,8 @@ var FormLayout = createReactClass({
         this.setState({result: r})
     },
     handleClear: function(){
-        this.refs.filedNum1.setState({value:""});
-        this.refs.filedNum2.setState({value:""});
+        this.refs.filedNum1.clear();
+        this.refs.filedNum2.clear();
         this.setState({result : 0})
     },
     render: function(){
